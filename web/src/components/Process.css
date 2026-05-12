@@ -2,11 +2,21 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 50%, rgba(163,255,18,0.06), transparent 60%),
-    var(--bg);
+    radial-gradient(circle at 20% 30%, rgba(163,255,18,0.1), transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(163,255,18,0.07), transparent 55%),
+    linear-gradient(180deg, transparent 0%, rgba(14,14,18,0.7) 50%, transparent 100%);
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
 }
+.ksa-process::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(163,255,18,0.05), transparent 60%);
+  pointer-events: none;
+  animation: ksa-blob-pulse 14s ease-in-out infinite;
+}
+.ksa-process > * { position: relative; z-index: 1; }
 
 .ksa-process__head {
   margin-bottom: 64px;

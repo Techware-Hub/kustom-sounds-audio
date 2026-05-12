@@ -1,7 +1,32 @@
 .ksa-faq {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, rgba(10,14,10,0.55) 50%, transparent 100%);
 }
+.ksa-faq::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1486496146582-9ffcd0b2b2b7?auto=format&fit=crop&w=1600&q=70');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  filter: grayscale(0.5) contrast(1.05);
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+}
+.ksa-faq::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(163,255,18,0.08), transparent 55%),
+    radial-gradient(circle at 10% 90%, rgba(163,255,18,0.05), transparent 50%);
+  pointer-events: none;
+  animation: ksa-blob-pulse 20s ease-in-out infinite;
+}
+.ksa-faq > * { position: relative; z-index: 1; }
 
 .ksa-faq__head {
   display: flex;
@@ -60,14 +85,21 @@
 
 .ksa-faq__q-text { flex: 1; }
 .ksa-faq__icon {
-  font-family: var(--font-display);
-  font-size: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
   color: var(--accent);
   width: 28px;
+  height: 28px;
   text-align: center;
-  text-shadow: 0 0 12px var(--accent-glow);
+  filter: drop-shadow(0 0 6px var(--accent-glow));
   flex-shrink: 0;
+  transition: transform .4s cubic-bezier(.68,-0.4,.27,1.5);
+}
+.ksa-faq__icon svg { display: block; }
+.ksa-faq__item.is-open .ksa-faq__icon {
+  transform: rotate(180deg);
 }
 
 .ksa-faq__a {

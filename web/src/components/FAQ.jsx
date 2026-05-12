@@ -40,7 +40,11 @@ function FAQItem({ q, a }) {
         onClick={() => setOpen((o) => !o)}
       >
         <span className="ksa-faq__q-text">{q}</span>
-        <span className="ksa-faq__icon" aria-hidden="true">{open ? '–' : '+'}</span>
+        <span className="ksa-faq__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22">
+            <path d="M5 8 L11 14 L17 8" stroke="currentColor" strokeWidth="2.4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
       </button>
       <div className="ksa-faq__a" role="region" aria-hidden={!open}>
         <p>{a}</p>

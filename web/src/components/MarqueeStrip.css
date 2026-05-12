@@ -45,6 +45,20 @@
   letter-spacing: 6px;
   color: var(--accent);
   text-shadow: 0 0 18px var(--accent-glow);
+  display: inline-block;
+  animation: ksa-marquee-wobble 4.5s ease-in-out infinite;
+  transition: text-shadow .2s ease, transform .2s ease;
+}
+.ksa-marquee__phrase:hover {
+  text-shadow:
+    1px 0 0 rgba(255,0,80,0.6),
+    -1px 0 0 rgba(0,200,255,0.6),
+    0 0 22px var(--accent-glow);
+  transform: skewX(-3deg);
+}
+@keyframes ksa-marquee-wobble {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
 }
 .ksa-marquee__star {
   color: var(--accent);

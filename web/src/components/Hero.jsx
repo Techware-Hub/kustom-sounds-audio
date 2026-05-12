@@ -32,6 +32,8 @@ export default function Hero() {
     <section className="ksa-hero" ref={rootRef} id="top">
       <div className="ksa-hero__bg" style={{ backgroundImage: `url(${HERO_BG})` }} aria-hidden="true" />
       <div className="ksa-hero__vignette" aria-hidden="true" />
+      <div className="ksa-hero__blob ksa-hero__blob--l" aria-hidden="true" />
+      <div className="ksa-hero__blob ksa-hero__blob--r" aria-hidden="true" />
 
       <LightningBolt className="ksa-hero__bolt ksa-hero__bolt--l" />
       <LightningBolt className="ksa-hero__bolt ksa-hero__bolt--r" flipped />
@@ -61,11 +63,6 @@ export default function Hero() {
       </div>
 
       <EqualizerBars count={32} height={90} gap={3} className="ksa-hero__eq" />
-
-      <div className="ksa-hero__cue" aria-hidden="true">
-        <span>SCROLL</span>
-        <span className="ksa-hero__cue-arrow">▾</span>
-      </div>
     </section>
   );
 }

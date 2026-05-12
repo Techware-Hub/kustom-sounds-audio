@@ -1,7 +1,19 @@
 .ksa-contact {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, rgba(14,14,18,0.55) 50%, transparent 100%);
 }
+.ksa-contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 90% 80%, rgba(163,255,18,0.1), transparent 50%),
+    radial-gradient(circle at 5% 10%, rgba(163,255,18,0.05), transparent 50%);
+  pointer-events: none;
+  animation: ksa-blob-pulse 16s ease-in-out infinite;
+}
+.ksa-contact > * { position: relative; z-index: 1; }
 .ksa-contact__head { margin-bottom: 56px; display: flex; flex-direction: column; gap: 10px; }
 .ksa-contact__title { font-size: clamp(40px, 6vw, 88px); }
 .ksa-contact__sub { color: var(--muted); }
@@ -37,7 +49,27 @@
   box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
-.ksa-contact__cta { display: flex; flex-direction: column; gap: 18px; }
+.ksa-contact__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  isolation: isolate;
+  padding: 24px;
+  margin: -24px;
+}
+.ksa-contact__cta-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  filter: grayscale(0.3) brightness(0.7);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  z-index: -1;
+  pointer-events: none;
+}
 .ksa-contact__whats {
   display: flex; align-items: center; gap: 14px;
   background: var(--accent);

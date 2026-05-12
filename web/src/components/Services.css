@@ -1,7 +1,19 @@
 .ksa-services {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, rgba(16,16,10,0.5) 50%, transparent 100%);
 }
+.ksa-services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(163,255,18,0.08), transparent 50%),
+    radial-gradient(circle at 90% 70%, rgba(163,255,18,0.06), transparent 50%);
+  pointer-events: none;
+  animation: ksa-blob-pulse 15s ease-in-out infinite;
+}
+.ksa-services > * { position: relative; z-index: 1; }
 
 .ksa-services__head {
   display: flex;
@@ -35,7 +47,7 @@
   flex-direction: column;
 }
 .ksa-service:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) rotate(-0.3deg);
   border-color: var(--accent);
   box-shadow: 0 0 30px var(--accent-glow);
 }

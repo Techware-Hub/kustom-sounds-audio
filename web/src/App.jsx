@@ -28,11 +28,14 @@ export default function App() {
       <Hero />
       <MarqueeStrip />
       <About />
+      <div className="ksa-accent-strip" aria-hidden="true" />
       <Services />
       <Features />
+      <div className="ksa-accent-strip" aria-hidden="true" />
       <Gallery />
       <Process />
       <Brands />
+      <div className="ksa-accent-strip" aria-hidden="true" />
       <Testimonials />
       <FAQ />
       <Contact />

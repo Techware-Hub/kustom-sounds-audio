@@ -8,6 +8,8 @@ const STATS = [
   { value: 12,  label: 'Years Dialed In',  suffix: '+' },
 ];
 
+const WORKSHOP_IMG = 'https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1600&q=70';
+
 function StatCard({ value, label, suffix }) {
   const { ref, value: v } = useCountUp(value);
   return (
@@ -25,6 +27,11 @@ export default function About() {
 
   return (
     <section className="ksa-section ksa-about" id="about" ref={sectionRef}>
+      <div
+        className="ksa-about__bg-img"
+        style={{ backgroundImage: `url(${WORKSHOP_IMG})` }}
+        aria-hidden="true"
+      />
       <div className="ksa-about__grid">
         <div className="ksa-about__copy">
           <span className="ksa-badge ksa-about__badge" data-reveal>About · Workshop</span>
@@ -49,9 +56,11 @@ export default function About() {
           <span className="ksa-badge ksa-about__hours" data-reveal>Workshop Hours · Mon–Sat · 9a–7p</span>
         </div>
 
-        <div className="ksa-about__stats" data-reveal>
+        <div className="ksa-about__stats">
           {STATS.map((s) => (
-            <StatCard key={s.label} value={s.value} label={s.label} suffix={s.suffix} />
+            <div key={s.label} data-reveal>
+              <StatCard value={s.value} label={s.label} suffix={s.suffix} />
+            </div>
           ))}
         </div>
       </div>

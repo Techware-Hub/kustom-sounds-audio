@@ -48,6 +48,11 @@ export default function Contact() {
         </form>
 
         <aside className="ksa-contact__cta" data-reveal>
+          <div
+            className="ksa-contact__cta-bg"
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1600&q=70)' }}
+            aria-hidden="true"
+          />
           <a className="ksa-contact__whats" href="https://wa.me/000000000" target="_blank" rel="noopener">
             <span className="ksa-contact__whats-icon" aria-hidden="true">●</span>
             <span>
