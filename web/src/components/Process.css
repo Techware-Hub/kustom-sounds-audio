@@ -110,3 +110,17 @@
   .ksa-process__num { font-size: 72px; }
   .ksa-process__step-title { font-size: 26px; letter-spacing: 2px; }
 }
+
+@media (max-width: 480px) {
+  .ksa-process__head { margin-bottom: 44px; }
+  .ksa-process__step {
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    padding-bottom: 24px;
+  }
+  .ksa-process__dot { width: 14px; height: 14px; margin-top: 20px; }
+  .ksa-process__card { padding: 20px 18px 22px; }
+  .ksa-process__num { font-size: 56px; }
+  .ksa-process__step-title { font-size: 22px; letter-spacing: 1px; margin: 4px 0 10px; }
+  .ksa-process__copy { font-size: 14px; }
+}

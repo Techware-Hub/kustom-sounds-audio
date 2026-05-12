@@ -36,3 +36,9 @@
   .ksa-brands__item { font-size: 24px; letter-spacing: 4px; }
   .ksa-brands__track { animation-duration: 20s; }
 }
+
+@media (max-width: 480px) {
+  .ksa-brands { padding: 20px 0; }
+  .ksa-brands__item { font-size: 18px; letter-spacing: 3px; gap: 18px; padding: 0 18px; }
+  .ksa-brands__track { animation-duration: 16s; }
+}

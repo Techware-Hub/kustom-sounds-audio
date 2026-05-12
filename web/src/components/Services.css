@@ -118,5 +118,9 @@
   .ksa-services__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
-  .ksa-services__grid { grid-template-columns: 1fr; }
+  .ksa-services__grid { grid-template-columns: 1fr; gap: 18px; }
+  .ksa-services__head { margin-bottom: 40px; }
+  .ksa-service__img { height: 180px; }
+  .ksa-service__body { padding: 20px 20px 52px; }
+  .ksa-service__title { font-size: 24px; }
 }

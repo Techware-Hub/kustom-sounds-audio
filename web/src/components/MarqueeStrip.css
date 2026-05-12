@@ -76,3 +76,10 @@
   .ksa-marquee__track { animation-duration: 22s; }
   .ksa-marquee::before, .ksa-marquee::after { width: 40px; }
 }
+
+@media (max-width: 480px) {
+  .ksa-marquee { padding: 14px 0; }
+  .ksa-marquee__phrase { font-size: 15px; letter-spacing: 3px; }
+  .ksa-marquee__item { gap: 14px; padding: 0 14px; }
+  .ksa-marquee__track { animation-duration: 18s; }
+}

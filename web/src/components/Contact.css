@@ -100,5 +100,20 @@
 .ksa-contact__line:hover { border-color: var(--accent); color: var(--accent); }
 
 @media (max-width: 900px) {
-  .ksa-contact__grid { grid-template-columns: 1fr; }
+  .ksa-contact__grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 480px) {
+  .ksa-contact__head { margin-bottom: 40px; }
+  .ksa-contact__grid { gap: 28px; }
+  .ksa-contact__form { gap: 14px; }
+  .ksa-contact__form input,
+  .ksa-contact__form textarea { padding: 14px 14px; font-size: 16px; min-height: 48px; }
+  .ksa-contact__form textarea { min-height: 120px; }
+  .ksa-contact__form .ksa-btn { width: 100%; justify-content: center; min-height: 48px; }
+  .ksa-contact__cta { padding: 18px; margin: -18px; gap: 14px; }
+  .ksa-contact__whats { padding: 16px 18px; gap: 12px; }
+  .ksa-contact__whats strong { font-size: 18px; letter-spacing: 0.5px; }
+  .ksa-contact__line, .ksa-contact__addr { padding: 14px 16px; }
+  .ksa-contact__line strong, .ksa-contact__addr strong { font-size: 15px; }
 }

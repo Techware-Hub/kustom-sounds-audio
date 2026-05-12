@@ -188,3 +188,13 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
+
+/* ---------- Mobile safety net ---------- */
+@media (max-width: 480px) {
+  /* iOS prevents zoom-on-focus when input font-size >= 16px */
+  input, textarea, select { font-size: 16px; }
+  /* Ensure CTA buttons meet 44px tap-target on phones */
+  .ksa-btn { min-height: 44px; padding: 12px 22px; font-size: 13px; letter-spacing: 2px; }
+  /* Section padding floor */
+  .ksa-section { padding-left: max(16px, var(--section-pad-x)); padding-right: max(16px, var(--section-pad-x)); }
+}

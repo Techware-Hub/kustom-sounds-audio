@@ -81,3 +81,13 @@
   text-transform: uppercase;
 }
 .ksa-wall__later:hover { color: var(--chrome); }
+
+@media (max-width: 480px) {
+  .ksa-wall { padding: 16px; }
+  .ksa-wall__panel { padding: 44px 22px 28px; }
+  .ksa-wall__eq { max-width: 96px; margin-bottom: 14px; }
+  .ksa-wall__copy { font-size: 14px; margin-bottom: 22px; }
+  .ksa-wall__cta { width: 100%; }
+  .ksa-wall__cta .ksa-btn { width: 100%; justify-content: center; min-height: 48px; }
+  .ksa-wall__close { top: 8px; right: 10px; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; }
+}

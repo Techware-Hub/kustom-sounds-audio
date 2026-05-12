@@ -64,3 +64,16 @@
   .ksa-footer__grid { grid-template-columns: 1fr; gap: 40px; }
   .ksa-footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+@media (max-width: 480px) {
+  .ksa-footer { padding: 60px var(--section-pad-x) 20px; }
+  .ksa-footer__grid { margin-bottom: 44px; gap: 32px; }
+  .ksa-footer__logo { width: 120px; }
+  .ksa-footer__nav button, .ksa-footer__social button {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    min-height: 32px;
+    padding: 4px 0;
+  }
+  .ksa-footer__bottom { font-size: 10px; letter-spacing: 2px; }
+}

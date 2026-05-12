@@ -108,3 +108,14 @@
   .ksa-hero__bolt { display: none; }
   .ksa-hero__eq { padding: 0 16px; bottom: 24px; }
 }
+
+@media (max-width: 480px) {
+  .ksa-hero { padding: 64px 16px 96px; min-height: 90vh; }
+  .ksa-hero__logo { width: 140px; }
+  .ksa-hero__inner { gap: 18px; }
+  .ksa-hero__blob { width: 320px; height: 320px; filter: blur(70px); }
+  .ksa-hero__sub { font-size: 14px; padding: 0 4px; }
+  .ksa-hero__ctas { gap: 10px; width: 100%; }
+  .ksa-hero__ctas .ksa-btn { flex: 1 1 auto; justify-content: center; padding: 14px 18px; min-height: 48px; }
+  .ksa-hero__eq { display: none; }
+}

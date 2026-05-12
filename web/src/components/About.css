@@ -87,3 +87,12 @@
   .ksa-about__grid { grid-template-columns: 1fr; gap: 48px; }
   .ksa-about__stats { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 32px; }
 }
+
+@media (max-width: 480px) {
+  .ksa-about__bg-img { width: 60%; opacity: 0.05; }
+  .ksa-about__grid { gap: 36px; }
+  .ksa-about__copy p { font-size: 15px; }
+  .ksa-about__stats { gap: 28px; padding-top: 24px; }
+  .ksa-about__stat-val { font-size: clamp(48px, 14vw, 72px); }
+  .ksa-about__stat-label { font-size: 11px; letter-spacing: 3px; }
+}
