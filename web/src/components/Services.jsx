@@ -17,7 +17,7 @@ const SERVICES = [
   {
     title: 'MARINE',
     copy: 'Boats and jet skis. Sealed, salt-rated, weather-built audio that survives the lake.',
-    img: 'https://images.unsplash.com/photo-1599582909646-2126052dc6cd?auto=format&fit=crop&w=900&q=70',
+    img: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=900&q=70',
     features: ['Salt-rated speakers', 'Wakeboard tower pods', 'Marine amp racks'],
   },
   {
