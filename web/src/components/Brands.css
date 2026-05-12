@@ -1,0 +1,38 @@
+.ksa-brands {
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  background: #060606;
+  padding: 28px 0;
+  overflow: hidden;
+}
+.ksa-brands__marquee { overflow: hidden; }
+.ksa-brands__track {
+  display: flex;
+  width: max-content;
+  animation: ksa-marquee 28s linear infinite;
+}
+.ksa-brands__marquee:hover .ksa-brands__track { animation-play-state: paused; }
+
+.ksa-brands__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  letter-spacing: 6px;
+  color: var(--chrome);
+  padding: 0 28px;
+  white-space: nowrap;
+}
+.ksa-brands__item:hover { color: var(--accent); }
+.ksa-brands__sep { color: var(--accent); opacity: 0.5; }
+
+@keyframes ksa-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .ksa-brands__item { font-size: 24px; letter-spacing: 4px; }
+  .ksa-brands__track { animation-duration: 20s; }
+}
