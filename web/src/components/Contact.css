@@ -1,14 +1,5 @@
-.ksa-contact { padding: 0; max-width: none; }
-.ksa-contact__pin {
+.ksa-contact {
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: var(--section-pad-y) var(--section-pad-x);
-  max-width: var(--container);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   overflow: hidden;
 }
 .ksa-contact__head { margin-bottom: 56px; display: flex; flex-direction: column; gap: 10px; }

@@ -1,14 +1,5 @@
-.ksa-services { padding: 0; max-width: none; }
-.ksa-services__pin {
+.ksa-services {
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: var(--section-pad-y) var(--section-pad-x);
-  max-width: var(--container);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -19,6 +10,13 @@
   margin-bottom: 60px;
 }
 .ksa-services__title { font-size: clamp(40px, 6vw, 88px); }
+.ksa-services__lede {
+  color: var(--muted);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
 
 .ksa-services__grid {
   display: grid;
@@ -33,6 +31,8 @@
   overflow: hidden;
   transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  display: flex;
+  flex-direction: column;
 }
 .ksa-service:hover {
   transform: translateY(-6px);
@@ -41,7 +41,7 @@
 }
 
 .ksa-service__img {
-  height: 220px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   filter: grayscale(0.4) contrast(1.05) brightness(0.8);
@@ -52,7 +52,7 @@
   filter: grayscale(0) brightness(1);
 }
 
-.ksa-service__body { padding: 22px 22px 28px; position: relative; }
+.ksa-service__body { padding: 22px 22px 56px; position: relative; flex: 1; }
 .ksa-service__num {
   font-family: var(--font-body);
   font-size: 11px;
@@ -64,7 +64,35 @@
   margin: 6px 0 10px;
   letter-spacing: 1px;
 }
-.ksa-service__copy { font-size: 14px; color: #b0b0b0; }
+.ksa-service__copy { font-size: 14px; color: #b0b0b0; margin-bottom: 14px; }
+
+.ksa-service__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 12px;
+}
+.ksa-service__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--chrome);
+  letter-spacing: 0.5px;
+}
+.ksa-service__features span {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 12px;
+  width: 14px;
+  text-align: center;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
 .ksa-service__arrow {
   position: absolute;
   right: 22px; bottom: 18px;
