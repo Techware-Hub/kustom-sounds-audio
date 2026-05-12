@@ -1,0 +1,115 @@
+.ksa-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 20px 120px;
+  background: var(--bg);
+}
+
+.ksa-hero__bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  filter: grayscale(0.4) contrast(1.1);
+}
+.ksa-hero__vignette {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 60%, transparent, rgba(0,0,0,0.85) 75%),
+    radial-gradient(circle at 50% 40%, rgba(163,255,18,0.18), transparent 55%);
+}
+
+.ksa-hero__bolt {
+  position: absolute;
+  top: 8%;
+  z-index: 3;
+}
+.ksa-hero__bolt--l { left: 6%; }
+.ksa-hero__bolt--r { right: 6%; }
+
+.ksa-hero__inner {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.ksa-hero__logo {
+  width: 280px;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(163,255,18,0.35));
+  animation: ksa-hero-float 6s ease-in-out infinite;
+}
+@keyframes ksa-hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.ksa-hero__headline {
+  font-size: clamp(48px, 9vw, 124px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  margin: 8px 0 4px;
+  text-shadow: 0 0 24px rgba(163,255,18,0.25);
+}
+.ksa-hero__word { display: inline-block; }
+.ksa-hero__char { display: inline-block; }
+
+.ksa-hero__sub {
+  font-size: clamp(15px, 1.6vw, 19px);
+  max-width: 620px;
+  color: #c8c8c8;
+}
+
+.ksa-hero__ctas {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  margin-top: 8px;
+}
+
+.ksa-hero__eq {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  opacity: 0.75;
+}
+
+.ksa-hero__cue {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 5;
+}
+.ksa-hero__cue-arrow {
+  animation: ksa-bob 1.6s ease-in-out infinite;
+  color: var(--accent);
+}
+@keyframes ksa-bob {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(4px); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .ksa-hero__logo { width: 180px; }
+  .ksa-hero__bolt { display: none; }
+  .ksa-hero__eq { padding: 0 16px; bottom: 24px; }
+}
