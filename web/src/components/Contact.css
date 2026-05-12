@@ -1,0 +1,68 @@
+.ksa-contact__head { margin-bottom: 56px; display: flex; flex-direction: column; gap: 10px; }
+.ksa-contact__title { font-size: clamp(40px, 6vw, 88px); }
+.ksa-contact__sub { color: var(--muted); }
+
+.ksa-contact__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+}
+
+.ksa-contact__form { display: flex; flex-direction: column; gap: 18px; }
+.ksa-contact__form label { display: flex; flex-direction: column; gap: 6px; }
+.ksa-contact__form span {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.ksa-contact__form input,
+.ksa-contact__form textarea {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: var(--chrome);
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.ksa-contact__form input:focus,
+.ksa-contact__form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.ksa-contact__cta { display: flex; flex-direction: column; gap: 18px; }
+.ksa-contact__whats {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--accent);
+  color: #000;
+  padding: 20px 22px;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+.ksa-contact__whats small { display: block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; }
+.ksa-contact__whats strong { font-family: var(--font-display); font-size: 26px; letter-spacing: 2px; }
+.ksa-contact__whats-icon {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.2);
+}
+
+.ksa-contact__line, .ksa-contact__addr {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: 16px 20px;
+  display: block;
+}
+.ksa-contact__line small, .ksa-contact__addr small {
+  display: block; font-size: 11px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px;
+}
+.ksa-contact__line strong, .ksa-contact__addr strong {
+  font-family: var(--font-display); font-size: 22px; letter-spacing: 1px; color: var(--chrome);
+}
+.ksa-contact__line:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 900px) {
+  .ksa-contact__grid { grid-template-columns: 1fr; }
+}
