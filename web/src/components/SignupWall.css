@@ -1,0 +1,83 @@
+.ksa-wall {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.ksa-wall__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(163, 255, 18, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 255, 18, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  animation: ksa-wall-glitch 3s steps(2) infinite;
+}
+@keyframes ksa-wall-glitch {
+  0%, 95%, 100% { opacity: 1; transform: translate(0,0); }
+  96% { opacity: 0.5; transform: translate(2px,-1px); }
+  98% { opacity: 0.8; transform: translate(-2px,1px); }
+}
+
+.ksa-wall__panel {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 60px var(--accent-glow), inset 0 0 30px rgba(163,255,18,0.04);
+  padding: 56px 32px 36px;
+  text-align: center;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+.ksa-wall__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--chrome);
+  font-size: 28px;
+  line-height: 1;
+}
+.ksa-wall__close:hover { color: var(--accent); }
+
+.ksa-wall__eq { margin: 0 auto 18px; max-width: 120px; }
+
+.ksa-wall__badge { display: inline-block; margin-bottom: 10px; }
+
+.ksa-wall__title {
+  font-size: clamp(28px, 6vw, 44px);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 14px var(--accent-glow);
+}
+
+.ksa-wall__copy {
+  font-size: 15px;
+  color: #b8b8b8;
+  margin-bottom: 28px;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ksa-wall__cta { margin-bottom: 14px; }
+.ksa-wall__later {
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.ksa-wall__later:hover { color: var(--chrome); }
