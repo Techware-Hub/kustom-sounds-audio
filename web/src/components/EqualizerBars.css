@@ -1,0 +1,22 @@
+.ksa-eq {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+.ksa-eq__bar {
+  flex: 1;
+  min-width: 3px;
+  max-width: 8px;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  border-radius: 1px;
+  animation: ksa-eq-pulse 1.1s ease-in-out infinite;
+}
+@keyframes ksa-eq-pulse {
+  0%, 100% { height: 20%; }
+  20% { height: 70%; }
+  40% { height: 40%; }
+  60% { height: 95%; }
+  80% { height: 55%; }
+}
