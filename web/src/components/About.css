@@ -1,7 +1,18 @@
 .ksa-about {
   position: relative;
+  padding: 0;
+  max-width: none;
 }
-.ksa-about::before {
+.ksa-about__pin {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--section-pad-y) var(--section-pad-x);
+  overflow: hidden;
+}
+.ksa-about__pin::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -15,6 +26,9 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 80px;
   align-items: center;
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
 }
 
 .ksa-about__title {
