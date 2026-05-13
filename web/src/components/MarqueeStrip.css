@@ -28,7 +28,9 @@
 .ksa-marquee__track {
   display: flex;
   width: max-content;
-  animation: ksa-marquee-strip 32s linear infinite;
+  animation: none;
+  width: 100%;
+  justify-content: center;
 }
 .ksa-marquee:hover .ksa-marquee__track { animation-play-state: paused; }
 
@@ -46,7 +48,6 @@
   color: var(--accent);
   text-shadow: 0 0 18px var(--accent-glow);
   display: inline-block;
-  animation: ksa-marquee-wobble 4.5s ease-in-out infinite;
   transition: text-shadow .2s ease, transform .2s ease;
 }
 .ksa-marquee__phrase:hover {

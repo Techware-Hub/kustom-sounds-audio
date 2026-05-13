@@ -8,10 +8,11 @@
 .ksa-brands__marquee { overflow: hidden; }
 .ksa-brands__track {
   display: flex;
-  width: max-content;
-  animation: ksa-marquee 28s linear infinite;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 0;
 }
-.ksa-brands__marquee:hover .ksa-brands__track { animation-play-state: paused; }
 
 .ksa-brands__item {
   display: inline-flex;

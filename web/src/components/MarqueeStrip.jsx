@@ -10,8 +10,7 @@ const PHRASES = [
 ];
 
 export default function MarqueeStrip() {
-  // Double the array so the marquee loops seamlessly with translateX(-50%)
-  const sequence = [...PHRASES, ...PHRASES];
+  const sequence = PHRASES;
 
   return (
     <section className="ksa-marquee" aria-hidden="true">
